@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FitMe</string>
+    <string-array name="goals_array">
+        <item>Build Muscle</item>
+        <item>Gain Weight</item>
+        <item>Lose Weight</item>
+    </string-array>
+</resources>

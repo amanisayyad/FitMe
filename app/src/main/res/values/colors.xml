@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="background">#edf6f9</color>
+    <color name="coralButton">#e29578</color>
+    <color name="darkButton">#006d77</color>
+    <color name="light">#83c5be</color>
+</resources>
