@@ -21,12 +21,11 @@ public class FinalActivity extends AppCompatActivity {
         setContentView(R.layout.activity_final);
 
         answers = findViewById(R.id.answers);
-        answers.clearCheck(); // Ensure no default selection
+        answers.clearCheck();
 
         answers.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                // Display toast on selection
                 if (checkedId != -1) {
                     Toast.makeText(FinalActivity.this, "Thanks for your feedback!", Toast.LENGTH_SHORT).show();
                 }

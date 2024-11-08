@@ -42,7 +42,7 @@ android:background="@color/background"
         android:inputType="text"
         android:textColor="@color/darkButton"/>
 
-    <!-- Password EditText -->
+
     <EditText
         android:id="@+id/password"
         android:layout_width="320dp"
@@ -54,7 +54,7 @@ android:background="@color/background"
         android:inputType="textPassword"
         android:textColor="@color/darkButton"/>
 
-    <!-- Login Button -->
+
     <Button
         android:id="@+id/loginButton"
         android:layout_width="218dp"

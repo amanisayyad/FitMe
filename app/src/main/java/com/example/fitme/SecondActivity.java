@@ -22,7 +22,7 @@ public class SecondActivity extends AppCompatActivity {
         next=findViewById(R.id.nextButton);
         String username = getIntent().getStringExtra("username");
 
-        // Use the username (e.g., display it in a TextView)
+
         TextView welcomeTextView = findViewById(R.id.welcomeTextView);
         welcomeTextView.setText("Welcome to FitMe " + username + "! Let's get you started on your fitness journey.");
         next.setOnClickListener(new View.OnClickListener() {

@@ -37,15 +37,14 @@ public class ThirdActivity extends AppCompatActivity {
         goal = findViewById(R.id.spinner_goal);
         gen = findViewById(R.id.gen);
 
-        //workouts = generateWorkoutOptions();
+
 
         gen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Generate the workout options when the button is clicked
                 workouts = generateWorkoutOptions();
 
-                // Populate the ListView with workout names
+
                 ArrayList<String> workoutNames = new ArrayList<>();
                 for (Workout workout : workouts) {
                     workoutNames.add(workout.getName());
@@ -57,11 +56,10 @@ public class ThirdActivity extends AppCompatActivity {
             }
         });
 
-        // Set an event handler for ListView item clicks
+
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                // Open the detail activity and pass the workout details
                 Intent intent = new Intent(ThirdActivity.this, DetailActivity.class);
                 intent.putExtra("name", workouts.get(position).getName());
                 intent.putExtra("difficulty", workouts.get(position).getDifficulty());
@@ -77,10 +75,14 @@ public class ThirdActivity extends AppCompatActivity {
         ArrayList<Workout> options = new ArrayList<>();
 
         String weightText = weight.getText().toString();
+        String heightText=height.getText().toString();
         if (weightText.isEmpty()) {
-            // Show a message or handle the case where weight input is empty
             Toast.makeText(this, "Please enter your weight", Toast.LENGTH_SHORT).show();
-            return options; // Return an empty list if the weight is not provided
+            return options;
+        }
+        if (heightText.isEmpty()) {
+            Toast.makeText(this, "Please enter your height", Toast.LENGTH_SHORT).show();
+            return options;
         }
 
         int weightInput = Integer.parseInt(weightText);
